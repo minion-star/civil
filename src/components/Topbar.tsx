@@ -31,7 +31,7 @@ const Topbar = () => {
 
                 {/* Mobile Menu Button */}
                 <button 
-                    className="md:hidden text-black text-3xl" 
+                    className="md:hidden text-black text-3xl hover:cursor-pointer hover:scale-120 transition duration-700" 
                     onClick={toggleMenu}
                 >
                     ☰
@@ -41,12 +41,12 @@ const Topbar = () => {
             {/* Mobile Menu (Hidden by Default) */}
             <div className={`md:hidden bg-amber-600/90 w-full absolute top-full left-0 transition-all duration-700 ease-in-out ${menuOpen ? "block" : "hidden"}`}>
                 <ul className="flex flex-col items-center py-4 space-y-4">
-                    <li><Link to="/" className="text-black" onClick={toggleMenu}>Home</Link></li>
-                    <li><Link to="/about" className="text-black" onClick={toggleMenu}>About Us</Link></li>
-                    <li><Link to="/projects" className="text-black" onClick={toggleMenu}>Projects</Link></li>
-                    <li><Link to="/blog" className="text-black" onClick={toggleMenu}>Blog</Link></li>
-                    <li><Link to="/pages" className="text-black" onClick={toggleMenu}>Pages</Link></li>
-                    <li><Link to="/contact" className="text-black" onClick={toggleMenu}>Contact Us</Link></li>
+                    <li><Link to="/" className="text-black hover:text-gray-700 duration-700 " onClick={toggleMenu}>Home</Link></li>
+                    <li><Link to="/about" className="text-black hover:text-gray-700 duration-700" onClick={toggleMenu}>About Us</Link></li>
+                    <li><Link to="/projects" className="text-black hover:text-gray-700 duration-700" onClick={toggleMenu}>Projects</Link></li>
+                    <li><Link to="/blog" className="text-black hover:text-gray-700 duration-700" onClick={toggleMenu}>Blog</Link></li>
+                    <li><Link to="/pages" className="text-black hover:text-gray-700 duration-700" onClick={toggleMenu}>Pages</Link></li>
+                    <li><Link to="/contact" className="text-black hover:text-gray-700 duration-700" onClick={toggleMenu}>Contact Us</Link></li>
                 </ul>
             </div>
         </div>
