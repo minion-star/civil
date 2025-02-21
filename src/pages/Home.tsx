@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+    const Navigate = useNavigate();
     return (
         <div>
             <div
@@ -13,9 +14,12 @@ const Home = () => {
                 <p className="text-lg md:text-2xl font-bold text-black">
                     Contractors & Construction Managers Since 1989
                 </p>
-                <button className="py-2 px-6 md:py-4 md:px-8 mt-6 rounded-full text-black bg-white hover:bg-black hover:text-white transition duration-500 hover:cursor-pointer">
+                <button className="py-2 px-6 md:py-4 md:px-8 mt-6 rounded-full text-black bg-white hover:bg-black hover:text-white transition duration-500 hover:cursor-pointer" onClick={()=>Navigate("/projects")}>
                     See Our Recent Projects
                 </button>
+            </div>
+            <div id="new-idea" className="bg-amber-500 bg-cover flex flex-1 justify-between">
+
             </div>
         </div>
     );
