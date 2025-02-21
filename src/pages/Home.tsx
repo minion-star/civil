@@ -13,7 +13,7 @@ const Home = () => {
                 <p className="text-lg md:text-2xl font-bold text-black">
                     Contractors & Construction Managers Since 1989
                 </p>
-                <button className="py-2 px-6 md:py-4 md:px-8 mt-6 rounded-full text-black bg-white hover:bg-black hover:text-white transition duration-500">
+                <button className="py-2 px-6 md:py-4 md:px-8 mt-6 rounded-full text-black bg-white hover:bg-black hover:text-white transition duration-500 hover:cursor-pointer">
                     See Our Recent Projects
                 </button>
             </div>
