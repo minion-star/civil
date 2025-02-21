@@ -3,3 +3,7 @@
     margin: 0px;
     overflow: auto;
 }
+html {
+    scroll-behavior: smooth;
+  }
+  
