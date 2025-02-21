@@ -29,9 +29,9 @@ const Home = () => {
                     See Our Recent Projects
                 </button>
             </div>
-            <div id="new-idea" className="bg-amber-500 bg-cover flex flex-col md:flex-row px-6 py-12">
+            <div id="new-idea" className="bg-amber-500 bg-cover flex flex-col md:flex-row px-12 py-12">
                 <div className="flex-auto">
-                    <p className="text-[48px] text-white">Already have an excellent idea!</p>
+                    <p className="text-[48px] text-white font-serif">Already have an excellent idea!</p>
                     <p className="text-[20px] text-white">And want to know whether it is possible to implement it?</p>
                 </div>
                 <div className="flex-auto text-center py-8">
@@ -41,7 +41,7 @@ const Home = () => {
             <div id="introduce-feature" className="bg-white bg-cover flex flex-col px-6 py-12">
                 {/* title */}
                 <div className="flex-auto text-center">
-                    <p className="text-[48px] text-black ">Introducing Our Features</p>
+                    <p className="text-[48px] text-black font-serif">Introducing Our Features</p>
                     <p className=" text-gray-500 mb-4">We understand the importance of innovation and professionalism and work with the best people to achieve this..</p>
                 </div>
                 {/* services */}
