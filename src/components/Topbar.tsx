@@ -8,12 +8,12 @@ const Topbar = () => {
             </div>
             <div className="flex flex-row justify-end w-full">
                 <ul className="flex flex-row p-4 align-middle">
-                    <li className="text-white m-1"><Link to="/">Home</Link></li>
-                    <li className="text-white m-1"><Link to="/About">About Us</Link></li>
-                    <li className="text-white m-1"><Link to="/About">Projects</Link></li>
-                    <li className="text-white m-1"><Link to="/About">Blog</Link></li>
-                    <li className="text-white m-1"><Link to="/About">Pages</Link></li>
-                    <li className="text-white m-1"><Link to="/About">Contact Us</Link></li>
+                    <li className="text-black m-1"><Link to="/">Home</Link></li>
+                    <li className="text-black m-1"><Link to="/About">About Us</Link></li>
+                    <li className="text-black m-1"><Link to="/About">Projects</Link></li>
+                    <li className="text-black m-1"><Link to="/About">Blog</Link></li>
+                    <li className="text-black m-1"><Link to="/About">Pages</Link></li>
+                    <li className="text-black m-1"><Link to="/About">Contact Us</Link></li>
                 </ul>
             </div>
         </div>
