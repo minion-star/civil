@@ -93,6 +93,7 @@ const Home = () => {
                         <hr className="text-amber-500 mt-4"/>
                         <p className="text-black text-[24px] my-8"> Our construction company was founded 10 years ago, during the peak of the building boom in the US. Since then, we've delivered high-quality, innovative, and sustainable solutions across various sectors.</p>
                         <p className="text-gray-500 text-md text-left"> We design and build durable structures, efficient transportation systems, and sustainable developments. From site preparation to project completion, we handle grading, drainage, and utility planning while ensuring compliance with regulations. Our transportation solutions enhance mobility through smart road and transit designs. With expert project management, we keep schedules, budgets, and risks under control, ensuring seamless execution. Sustainability drives our work, integrating eco-friendly materials and energy-efficient solutions to minimize environmental impact. Through innovation and precision, we create infrastructure that supports growth, efficiency, and long-term sustainability.</p>
+                        <button className="py-2 px-6 md:py-4 md:px-8 mt-6 rounded-full text-black border-2 border-black hover:bg-black hover:text-white transition duration-700 hover:cursor-pointer">View Portfolios</button>
                     </div>
                 </div>
             </div>
