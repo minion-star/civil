@@ -20,7 +20,7 @@ const Home = () => {
         AOS.init({
             duration: 1000, // Animation duration
             easing: 'ease-in-out', // Easing type
-            once: true, // Animation runs only once
+            once: false, // Animation runs only once
         });
     }, []);
 
@@ -83,17 +83,20 @@ const Home = () => {
                 </div>
                 <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
                 {/* explanation */}
-                <div className="grid grid-col-1 gap-4 md:grid-col-2">
-                    <div className="p-4">
-                        <img src="/assets/excavator.jpg" alt="excavator" className="w-192 h-192"/>
+                <div className="flex flex-col md:flex-row">
+                    <div className="p-4 m-4 flex-1">
+                        <img src="/assets/excavator.jpg" alt="excavator" className="w-168"/>
                     </div>
-                    <div className="text-center p-4">
+                    <div className="text-center p-4 m-4 flex-1">
                         <p className="text-[48px] text-black font-serif">Providing All Kinds of Construction Services</p>
                         <hr className="text-amber-500 mt-4"/>
                         <p className="text-black text-[24px] my-8"> Our construction company was founded 10 years ago, during the peak of the building boom in the US. Since then, we've delivered high-quality, innovative, and sustainable solutions across various sectors.</p>
                         <p className="text-gray-500 text-md">we provide...</p>
                     </div>
                 </div>
+            </div>
+            <div>
+
             </div>
         </div>
     );
