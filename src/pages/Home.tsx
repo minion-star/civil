@@ -97,8 +97,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                
+            <div className="bg-amber-500 bg-cover flex flex-col md:flex-row px-12 py-12">
+                <div>
+                    <img src="/assets/physical-status.png"/>
+                    <p className="text-[18px] text-white text-center mt-6">Physical</p>
+                </div>
             </div>
         </div>
     );
