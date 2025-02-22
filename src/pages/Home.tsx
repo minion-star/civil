@@ -12,6 +12,16 @@ const services = [
     { img: "/assets/service-6.png", title: "Engineering", content: "It is a long established fact that reader distracted by the readable content of a page when looking at its layout." },
 ];
 
+const statuses = [
+    {img: "/assets/physical-status.png", title: "Physical", status:"39%"},
+    {img: "/assets/technology-status.png", title: "Technology", status:"45%"},
+    {img: "/assets/management-status.png", title: "Management", status:"40%"},
+    {img: "/assets/design-status.png", title: "Design", status:"55%"},
+    {img: "/assets/planning-status.png", title: "Planning", status:"45%"},
+    {img: "/assets/regulations-status.png", title: "Regulations", status:"37%"},
+]
+
+
 const Home = () => {
     const navigate = useNavigate();
 
@@ -97,11 +107,13 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-amber-500 bg-cover flex flex-col md:flex-row px-12 py-12">
-                <div>
-                    <img src="/assets/physical-status.png"/>
-                    <p className="text-[18px] text-white text-center mt-6">Physical</p>
-                </div>
+            <div className="bg-amber-500 bg-cover flex flex-col md:flex-row px-12 py-12" id="status">
+                {statuses.map((status, index)=>(
+                    <div className="flex flex-col mx-16" key={index}>
+                        <p className="text-white text-center py-12 text-[24px] w-32 h-32 bg-no-repeat" style={{ backgroundImage: `url(${status.img})` }}>{status.status}</p>
+                        <p className="text-[18px] text-white text-center mt-6">{status.title}</p>
+                    </div>
+                ))}
             </div>
         </div>
     );
