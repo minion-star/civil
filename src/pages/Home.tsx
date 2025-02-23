@@ -107,13 +107,16 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-amber-500 bg-cover flex flex-col md:flex-row px-12 py-12" id="status">
+            <div className="bg-amber-500 bg-cover flex flex-col md:flex-row px-12 py-12 items-center" id="status">
                 {statuses.map((status, index)=>(
-                    <div className="flex flex-col mx-16" key={index}>
+                    <div className="flex flex-col mx-16 my-4" key={index} data-aos="fade-up">
                         <p className="text-white text-center py-12 text-[24px] w-32 h-32 bg-no-repeat" style={{ backgroundImage: `url(${status.img})` }}>{status.status}</p>
                         <p className="text-[18px] text-white text-center mt-6">{status.title}</p>
                     </div>
                 ))}
+            </div>
+            <div className="bg-white bg-cover flex flex-col px-12 py-12" id="creative-work">
+                <p className="text-black text-center text-[48px] font-serif">Our Creative Work</p>
             </div>
         </div>
     );
