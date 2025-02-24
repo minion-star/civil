@@ -38,6 +38,7 @@ const Home = () => {
             anchorPlacement: 'top-bottom',
         });
     }, []);
+    
 
     return (
         <div>
@@ -198,31 +199,24 @@ const Home = () => {
             <div className="flex flex-col px-12 py-12 bg-white bg-cover" id="past" data-aos="fade-up">
                 <p className="text-black text-center text-[48px] font-serif">Our Creative Team</p>
                 <p className="text-gray-500 mb-4 text-center">A wonderful serenity has taken possession of my entire soul, like these sweet mo alone, and feel the charm of existence in this spot.</p>
-                <div className="flex flex-col md:flex-row mt-4">
-                    <div className="flex flex-1 flex-col">
-                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
-                        <p className="text-center text-amber-500">Builder Operation Head</p>
-                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
-                    </div>
-                    <div className="flex flex-1 flex-col">
-                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
-                        <p className="text-center text-amber-500">Builder Operation Head</p>
-                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
-                    </div>
-                    <div className="flex flex-1 flex-col">
-                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
-                        <p className="text-center text-amber-500">Builder Operation Head</p>
-                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
-                    </div>
-                    <div className="flex flex-1 flex-col">
-                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
-                        <p className="text-center text-amber-500">Builder Operation Head</p>
-                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
-                    </div>
-                    <div className="flex flex-1 flex-col">
-                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
-                        <p className="text-center text-amber-500">Builder Operation Head</p>
-                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
+                <div className="relative w-full overflow-hidden">
+                    <div className="flex gap-6 overflow-x-auto snap-x scroll-smooth scrollbar-hide" id="team-slider">
+                        {[
+                            { img: "/assets/tm1.jpg", role: "Builder Operation Head", name: "BENEDICT ARNOLD" },
+                            { img: "/assets/tm2.jpg", role: "Senior Architect", name: "ALEXANDER HAMILTON" },
+                            { img: "/assets/tm3.jpg", role: "Site Engineer", name: "THOMAS JEFFERSON" },
+                            { img: "/assets/tm4.jpg", role: "Project Manager", name: "JAMES MADISON" },
+                            { img: "/assets/tm5.jpg", role: "Interior Designer", name: "GEORGE WASHINGTON" },
+                        ].map((member, index) => (
+                            <div 
+                                key={index} 
+                                className="min-w-[80%] sm:min-w-[45%] md:min-w-[32%] lg:min-w-[32%] flex flex-col snap-center md:snap-start"
+                            >
+                                <img src={member.img} alt={member.name} className="mb-4 rounded-lg shadow-lg"/>
+                                <p className="text-center text-amber-500">{member.role}</p>
+                                <p className="text-center text-black font-bold text-[24px]">{member.name}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
