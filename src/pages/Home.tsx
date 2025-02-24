@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaBriefcase } from "react-icons/fa";
 import { FaRegGrin } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa";
-import { FaMedal } from "react-icons/fa6";
+import { BsPersonFillGear } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 
@@ -171,21 +171,21 @@ const Home = () => {
                 </div>
                 <div className="bg-black bg-cover py-16 w-full flex flex-col flex-1 items-center opacity-80 hover:opacity-70 ">
                     <FaRegGrin className="text-white size-16 my-4"/>
-                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">120</p>
+                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">95</p>
                     <hr className="text-white w-32 my-4" />
-                    <p className="text-center font-light font-sans text-white">Years on the Market</p>
+                    <p className="text-center font-light font-sans text-white">Operational Brigades</p>
                 </div>
                 <div className="bg-black bg-cover py-16 w-full flex flex-col flex-1 items-center opacity-100 hover:opacity-90 ">
                     <FaChartBar className="text-white size-16 my-4"/>
-                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">120</p>
+                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">395</p>
                     <hr className="text-white w-32 my-4" />
-                    <p className="text-center font-light font-sans text-white">Years on the Market</p>
+                    <p className="text-center font-light font-sans text-white">Units Engineering</p>
                 </div>
                 <div className="bg-black bg-cover py-16 w-full flex flex-col flex-1 items-center opacity-80 hover:opacity-70 ">
-                    <FaMedal className="text-white size-16 my-4"/>
-                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">120</p>
+                    <BsPersonFillGear className="text-white size-16 my-4"/>
+                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">46</p>
                     <hr className="text-white w-32 my-4" />
-                    <p className="text-center font-light font-sans text-white">Years on the Market</p>
+                    <p className="text-center font-light font-sans text-white">Employees of the company</p>
                 </div>
             </div>
         </div>
