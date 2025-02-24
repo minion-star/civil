@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaBriefcase } from "react-icons/fa";
 import { FaRegGrin } from "react-icons/fa";
@@ -28,9 +28,32 @@ const statuses = [
     {img: "/assets/regulations-status.png", title: "Regulations", status:"37%"},
 ]
 
+const feedbacks = [
+    { 
+        name: "JOHN DOE", 
+        feedback: "An outstanding project manager with a keen eye for detail and excellent leadership skills."
+    },
+    { 
+        name: "EMILY CARTER", 
+        feedback: "Creative architect who masterfully combines aesthetics with functionality in every design."
+    },
+    { 
+        name: "MICHAEL SMITH", 
+        feedback: "Site engineer with expertise in quality control, safety, and ensuring seamless execution."
+    },
+    { 
+        name: "SOPHIA JOHNSON", 
+        feedback: "Passionate interior designer who transforms spaces into elegant and comfortable environments."
+    },
+    { 
+        name: "DAVID BROWN", 
+        feedback: "A visionary who brings innovative solutions to complex construction challenges."
+    }
+];
 
 const Home = () => {
     const navigate = useNavigate();
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         // Initialize AOS library
@@ -55,6 +78,17 @@ const Home = () => {
             sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
         }
     };
+
+    const feedbackRef = useRef<HTMLDivElement>(null);
+
+    const feedbackLeft = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? feedbacks.length - 1 : prevIndex - 1));
+    };
+
+    const feedbackRight = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === feedbacks.length - 1 ? 0 : prevIndex + 1));
+    };
+
 
     return (
         <div>
@@ -231,11 +265,36 @@ const Home = () => {
                         id="team-slider"
                     >
                         {[
-                            { img: "/assets/tm1.jpg", role: "Builder Operation Head", name: "BENEDICT ARNOLD" },
-                            { img: "/assets/tm2.jpg", role: "Senior Architect", name: "ALEXANDER HAMILTON" },
-                            { img: "/assets/tm3.jpg", role: "Site Engineer", name: "THOMAS JEFFERSON" },
-                            { img: "/assets/tm4.jpg", role: "Project Manager", name: "JAMES MADISON" },
-                            { img: "/assets/tm5.jpg", role: "Interior Designer", name: "GEORGE WASHINGTON" },
+                            { 
+                                img: "/assets/tm1.jpg", 
+                                role: "Builder Operation Head", 
+                                name: "BENEDICT ARNOLD", 
+                                intro: "Experienced in managing large-scale construction projects, ensuring smooth operations from start to finish." 
+                            },
+                            { 
+                                img: "/assets/tm2.jpg", 
+                                role: "Senior Architect", 
+                                name: "ALEXANDER HAMILTON", 
+                                intro: "Specialist in innovative architectural designs, blending modern aesthetics with structural integrity." 
+                            },
+                            { 
+                                img: "/assets/tm3.jpg", 
+                                role: "Site Engineer", 
+                                name: "THOMAS JEFFERSON", 
+                                intro: "Expert in site planning, execution, and quality control, ensuring safety and efficiency on construction sites." 
+                            },
+                            { 
+                                img: "/assets/tm4.jpg", 
+                                role: "Project Manager", 
+                                name: "JAMES MADISON", 
+                                intro: "Skilled in coordinating teams, budgeting, and scheduling to deliver projects on time and within scope." 
+                            },
+                            { 
+                                img: "/assets/tm5.jpg", 
+                                role: "Interior Designer", 
+                                name: "GEORGE WASHINGTON", 
+                                intro: "Passionate about creating elegant and functional spaces that reflect clients' vision and lifestyle." 
+                            }
                         ].map((member, index) => (
                             <div 
                                 key={index} 
@@ -244,6 +303,7 @@ const Home = () => {
                                 <img src={member.img} alt={member.name} className="mb-4 rounded-lg shadow-lg"/>
                                 <p className="text-center text-amber-500">{member.role}</p>
                                 <p className="text-center text-black font-bold text-[24px]">{member.name}</p>
+                                <p className="text-center text-black font-medium">{member.intro}</p>
                             </div>
                         ))}
                     </div>
@@ -252,6 +312,39 @@ const Home = () => {
                     <button 
                         onClick={scrollRight} 
                         className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 hover:cursor-pointer"
+                    >
+                        <FaAngleRight size={24} />
+                    </button>
+                </div>
+            </div>
+            <div className="flex flex-col px-12 py-12 bg-black bg-cover" id="feedback">
+                <p className="text-white text-center text-[48px] font-serif">Why Customers Love working with us</p>
+                <div className="relative w-full overflow-hidden mt-4 flex items-center justify-center" data-aos="fade-up">
+                    {/* Left Button */}
+                    <button 
+                        onClick={feedbackLeft} 
+                        className="absolute left-16 sm:left-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 hover:cursor-pointer z-10"
+                    >
+                        <FaAngleLeft size={24} />
+                    </button>
+
+                    {/* Feedback Card with Smooth Transition */}
+                    <div className="w-full flex justify-center">
+                        <div className="relative w-[80%] md:w-[50%]">
+                            <div 
+                                ref={feedbackRef}
+                                className="w-6xs h-64 transition-opacity duration-500 ease-in-out transform opacity-100 translate-x-0 text-center bg-gray-800 text-white p-6 rounded-lg shadow-lg"
+                            >
+                                <p className="font-bold text-[24px]">{feedbacks[currentIndex].name}</p>
+                                <p className="font-medium">{feedbacks[currentIndex].feedback}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Button */}
+                    <button 
+                        onClick={feedbackRight} 
+                        className="absolute right-16 sm:right-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 hover:cursor-pointer z-10"
                     >
                         <FaAngleRight size={24} />
                     </button>
