@@ -4,6 +4,9 @@ import { FaBriefcase } from "react-icons/fa";
 import { FaRegGrin } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa";
 import { BsPersonFillGear } from "react-icons/bs";
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
+import { useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 
@@ -39,6 +42,19 @@ const Home = () => {
         });
     }, []);
     
+    const sliderRef = useRef<HTMLDivElement>(null);
+
+    const scrollLeft = () => {
+        if (sliderRef.current) {
+            sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
+        }
+    };
+
+    const scrollRight = () => {
+        if (sliderRef.current) {
+            sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
+        }
+    };
 
     return (
         <div>
@@ -198,9 +214,22 @@ const Home = () => {
             </div>
             <div className="flex flex-col px-12 py-12 bg-white bg-cover" id="past" data-aos="fade-up">
                 <p className="text-black text-center text-[48px] font-serif">Our Creative Team</p>
-                <p className="text-gray-500 mb-4 text-center">A wonderful serenity has taken possession of my entire soul, like these sweet mo alone, and feel the charm of existence in this spot.</p>
+                <p className="text-gray-500 m-8 text-center">A wonderful serenity has taken possession of my entire soul, like these sweet mo alone, and feel the charm of existence in this spot.</p>
                 <div className="relative w-full overflow-hidden">
-                    <div className="flex gap-6 overflow-x-auto snap-x scroll-smooth scrollbar-hide" id="team-slider">
+                    {/* Left Button */}
+                    <button 
+                        onClick={scrollLeft} 
+                        className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 hover:cursor-pointer"
+                    >
+                        <FaAngleLeft size={24} />
+                    </button>
+
+                    {/* Slider */}
+                    <div 
+                        ref={sliderRef} 
+                        className="flex gap-6 overflow-hidden snap-x scroll-smooth scrollbar-hide " 
+                        id="team-slider"
+                    >
                         {[
                             { img: "/assets/tm1.jpg", role: "Builder Operation Head", name: "BENEDICT ARNOLD" },
                             { img: "/assets/tm2.jpg", role: "Senior Architect", name: "ALEXANDER HAMILTON" },
@@ -210,7 +239,7 @@ const Home = () => {
                         ].map((member, index) => (
                             <div 
                                 key={index} 
-                                className="min-w-[80%] sm:min-w-[45%] md:min-w-[32%] lg:min-w-[32%] flex flex-col snap-center md:snap-start"
+                                className="scroll-mr-6 min-w-[80%] sm:min-w-[45%] md:min-w-[33%] lg:min-w-[33%] flex flex-col snap-center md:snap-start"
                             >
                                 <img src={member.img} alt={member.name} className="mb-4 rounded-lg shadow-lg"/>
                                 <p className="text-center text-amber-500">{member.role}</p>
@@ -218,6 +247,14 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+
+                    {/* Right Button */}
+                    <button 
+                        onClick={scrollRight} 
+                        className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-gray-200 hover:cursor-pointer"
+                    >
+                        <FaAngleRight size={24} />
+                    </button>
                 </div>
             </div>
         </div>
