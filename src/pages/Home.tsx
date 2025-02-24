@@ -97,9 +97,10 @@ const Home = () => {
                 className="bg-[url('/assets/hero1.jpg')] bg-no-repeat bg-cover bg-center text-center flex flex-col items-center justify-center min-h-screen px-4 md:px-0 py-10 md:py-64"
             >
                 {/* content */}
-                <p className="text-3xl md:text-[64px] font-bold font-serif text-black">
+                <p className="text-3xl md:text-[64px] font-bold uppercase text-yellow-600 font-[Bungee] fire-text">
                     WAY IN BUILDING
                 </p>
+
                 <p className="text-lg md:text-2xl font-bold text-black">
                     Contractors & Construction Managers Since 1989
                 </p>
@@ -351,7 +352,8 @@ const Home = () => {
                 </div>
             </div>
             <div className="flex flex-col px-12 py-12 bg-white bg-cover" id="blogs">
-                
+                <p className="text-black text-[48px] text-center font-serif">Blogs</p>
+                <div></div>
             </div>
         </div>
     );
