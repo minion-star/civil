@@ -39,7 +39,7 @@ const Topbar = () => {
             </div>
 
             {/* Mobile Menu (Hidden by Default) */}
-            <div className={`md:hidden bg-amber-600/90 w-full absolute top-full left-0 transition-all duration-700 ease-in-out ${menuOpen ? "block" : "hidden"}`}>
+            <div className={`md:hidden bg-amber-600/90 w-full fixed top-0 left-0 transition-all duration-700 ease-in-out ${menuOpen ? "block" : "hidden"}`}>
                 <ul className="flex flex-col items-center py-4 space-y-4">
                     <li><Link to="/" className="text-black hover:text-gray-700 duration-700 " onClick={toggleMenu}>Home</Link></li>
                     <li><Link to="/about" className="text-black hover:text-gray-700 duration-700" onClick={toggleMenu}>About Us</Link></li>
