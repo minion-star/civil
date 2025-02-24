@@ -121,18 +121,18 @@ const Home = () => {
                     {[
                         [
                             ["/assets/pf1.jpg", "Project-01", "description-01"],
-                            ["/assets/pf6.jpg", "Project-06", "description-06"],
-                            ["/assets/pf7.jpg", "Project-07", "description-07"]
-                        ],
-                        [
                             ["/assets/pf2.jpg", "Project-02", "description-02"],
-                            ["/assets/pf4.jpg", "Project-04", "description-04"],
-                            ["/assets/pf9.jpg", "Project-09", "description-09"]
+                            ["/assets/pf3.jpg", "Project-03", "description-03"]
                         ],
                         [
-                            ["/assets/pf3.jpg", "Project-03", "description-03"],
+                            ["/assets/pf4.jpg", "Project-04", "description-04"],
                             ["/assets/pf5.jpg", "Project-05", "description-05"],
-                            ["/assets/pf8.jpg", "Project-08", "description-08"]
+                            ["/assets/pf6.jpg", "Project-06", "description-06"]
+                        ],
+                        [
+                            ["/assets/pf7.jpg", "Project-07", "description-07"],
+                            ["/assets/pf8.jpg", "Project-08", "description-08"],
+                            ["/assets/pf9.jpg", "Project-09", "description-09"]
                         ]
                     ].map((column, colIndex) => (
                         <div key={colIndex} className="flex flex-1 flex-col m-4">
@@ -140,10 +140,10 @@ const Home = () => {
                                 <div
                                     key={index}
                                     className="relative flex-auto mt-8 bg-no-repeat bg-cover bg-center min-h-[200px] max-h-[400px] w-full rounded-lg shadow-lg flex items-center justify-center group cursor-pointer"
-                                    style={{ backgroundImage: `url(${img})` }}
+                                    style={{ backgroundImage: `url(${img})` }}  data-aos="fade-up"
                                 >
                                     {/* Hover Overlay */}
-                                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center rounded-lg shadow-lg justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-50 transition-opacity duration-300">
                                         <p className="text-2xl">{title}</p>
                                         <p className="text-sm mt-2">{description}</p>
                                     </div>
