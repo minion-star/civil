@@ -121,7 +121,7 @@ const Home = () => {
             </div>
             <div className="bg-white bg-cover flex flex-col px-12 py-12" id="creative-work">
                 <p className="text-black text-center text-[48px] font-serif">Our Creative Work</p>
-                <div className="flex flex-col md:flex-row mt-16 p-8">
+                <div className="flex flex-col md:flex-row mt-16 px-8">
                     {[
                         [
                             ["/assets/pf1.jpg", "Project-01", "description-01"],
@@ -139,7 +139,7 @@ const Home = () => {
                             ["/assets/pf9.jpg", "Project-09", "description-09"]
                         ]
                     ].map((column, colIndex) => (
-                        <div key={colIndex} className="flex flex-1 flex-col m-4">
+                        <div key={colIndex} className="flex flex-1 flex-col mx-4">
                             {column.map(([img, title, description], index) => (
                                 <div
                                     key={index}
