@@ -112,7 +112,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="bg-amber-500 bg-cover flex flex-col px-6 py-12 items-center" id="status">
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-6xl">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 w-full max-w-8xl">
                     {statuses.map((status, index) => (
                         <div className="flex flex-col items-center" key={index} data-aos="fade-up">
                             <p
