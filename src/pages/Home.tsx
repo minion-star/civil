@@ -83,7 +83,7 @@ const Home = () => {
                 </div>
 
                 {/* services */}
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                     {services.map((service, index) => (
                         <div
                             key={index}
@@ -111,17 +111,24 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-amber-500 bg-cover flex flex-col md:flex-row px-12 py-12 items-center" id="status">
-                {statuses.map((status, index)=>(
-                    <div className="flex flex-col mx-16 my-4" key={index} data-aos="fade-up">
-                        <p className="text-white text-center py-12 text-[24px] w-32 h-32 bg-no-repeat" style={{ backgroundImage: `url(${status.img})` }}>{status.status}</p>
-                        <p className="text-[18px] text-white text-center mt-6">{status.title}</p>
-                    </div>
-                ))}
+            <div className="bg-amber-500 bg-cover flex flex-col px-6 py-12 items-center" id="status">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-6xl">
+                    {statuses.map((status, index) => (
+                        <div className="flex flex-col items-center" key={index} data-aos="fade-up">
+                            <p
+                                className="text-white text-center flex items-center justify-center text-[20px] w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-no-repeat bg-center bg-cover rounded-full shadow-lg"
+                                style={{ backgroundImage: `url(${status.img})` }}
+                            >
+                                {status.status}
+                            </p>
+                            <p className="text-[16px] sm:text-[18px] text-white text-center mt-4">{status.title}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className="bg-white bg-cover flex flex-col px-12 py-12" id="creative-work">
                 <p className="text-black text-center text-[48px] font-serif">Our Creative Work</p>
-                <div className="flex flex-col md:flex-row mt-16 px-8">
+                <div className="flex flex-col md:flex-row mt-16">
                     {[
                         [
                             ["/assets/pf1.jpg", "Project-01", "description-01"],
@@ -188,7 +195,7 @@ const Home = () => {
                     <p className="text-center font-light font-sans text-white">Employees of the company</p>
                 </div>
             </div>
-            <div>
+            <div className="flex flex-col md:flex-row px-12 py-12" id="past" data-aos="fade-up">
 
             </div>
         </div>
