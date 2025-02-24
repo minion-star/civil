@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaBriefcase } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 
@@ -143,7 +144,7 @@ const Home = () => {
                                     style={{ backgroundImage: `url(${img})` }}  data-aos="fade-up"
                                 >
                                     {/* Hover Overlay */}
-                                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center rounded-lg shadow-lg justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+                                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center rounded-lg shadow-lg justify-center text-white text-lg font-semibold opacity-0 group-hover:opacity-50 transition-opacity duration-700">
                                         <p className="text-2xl">{title}</p>
                                         <p className="text-sm mt-2">{description}</p>
                                     </div>
@@ -158,7 +159,32 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-            <div></div>
+            <div className="flex flex-col md:flex-row px-12 py-12">
+                <div className="bg-black bg-cover py-16 w-full flex flex-col flex-1 items-center opacity-100 hover:opacity-90 ">
+                    <FaBriefcase className="text-white size-16 my-4"/>
+                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">120</p>
+                    <hr className="text-white w-32 my-4" />
+                    <p className="text-center font-light font-sans text-white">Years on the Market</p>
+                </div>
+                <div className="bg-black bg-cover py-16 w-full flex flex-col flex-1 items-center opacity-100 hover:opacity-90 ">
+                    <FaBriefcase className="text-white size-16 my-4"/>
+                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">120</p>
+                    <hr className="text-white w-32 my-4" />
+                    <p className="text-center font-light font-sans text-white">Years on the Market</p>
+                </div>
+                <div className="bg-black bg-cover py-16 w-full flex flex-col flex-1 items-center opacity-100 hover:opacity-90 ">
+                    <FaBriefcase className="text-white size-16 my-4"/>
+                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">120</p>
+                    <hr className="text-white w-32 my-4" />
+                    <p className="text-center font-light font-sans text-white">Years on the Market</p>
+                </div>
+                <div className="bg-black bg-cover py-16 w-full flex flex-col flex-1 items-center opacity-100 hover:opacity-90 ">
+                    <FaBriefcase className="text-white size-16 my-4"/>
+                    <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">120</p>
+                    <hr className="text-white w-32 my-4" />
+                    <p className="text-center font-light font-sans text-white">Years on the Market</p>
+                </div>
+            </div>
         </div>
     );
 };
