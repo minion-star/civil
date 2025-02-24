@@ -152,10 +152,13 @@ const Home = () => {
                         </div>
                     ))}
                 </div>
-
+                <div className="flex-auto text-center py-8" data-aos="fade-up">
+                    <button className="px-6 py-2 md:py-4 md:px-8 rounded-full text-center text-black border-2 border-black hover:bg-black hover:text-white transition duration-700 cursor-pointer">
+                        View More Portfolio
+                    </button>
+                </div>
             </div>
-
-
+            <div></div>
         </div>
     );
 };
