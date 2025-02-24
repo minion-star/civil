@@ -335,8 +335,8 @@ const Home = () => {
                                 ref={feedbackRef}
                                 className="w-6xs h-64 transition-opacity duration-500 ease-in-out transform opacity-100 translate-x-0 text-center bg-gray-800 text-white p-6 rounded-lg shadow-lg"
                             >
-                                <p className="font-bold text-[24px]">{feedbacks[currentIndex].name}</p>
-                                <p className="font-medium">{feedbacks[currentIndex].feedback}</p>
+                                <p className="font-bold text-[24px] mb-8 text-amber-500">{feedbacks[currentIndex].name}</p>
+                                <p className="font-medium text-start">{feedbacks[currentIndex].feedback}</p>
                             </div>
                         </div>
                     </div>
@@ -349,6 +349,9 @@ const Home = () => {
                         <FaAngleRight size={24} />
                     </button>
                 </div>
+            </div>
+            <div className="flex flex-col px-12 py-12 bg-white bg-cover" id="blogs">
+                
             </div>
         </div>
     );
