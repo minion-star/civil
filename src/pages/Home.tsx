@@ -162,9 +162,9 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row px-12 py-12">
+            <div className="flex flex-col md:flex-row px-12 py-12" id="past" data-aos="fade-up">
                 <div className="bg-black bg-cover py-16 w-full flex flex-col flex-1 items-center opacity-100 hover:opacity-90 ">
-                    <FaBriefcase className="text-white size-16 my-4"/>
+                    <FaBriefcase className="text-white size-16 my-4" />
                     <p className="text-center font-semibold font-sans text-amber-500 text-[24px]">120</p>
                     <hr className="text-white w-32 my-4" />
                     <p className="text-center font-light font-sans text-white">Years on the Market</p>
@@ -187,6 +187,9 @@ const Home = () => {
                     <hr className="text-white w-32 my-4" />
                     <p className="text-center font-light font-sans text-white">Employees of the company</p>
                 </div>
+            </div>
+            <div>
+
             </div>
         </div>
     );
