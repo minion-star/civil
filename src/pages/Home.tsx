@@ -195,8 +195,36 @@ const Home = () => {
                     <p className="text-center font-light font-sans text-white">Employees of the company</p>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row px-12 py-12" id="past" data-aos="fade-up">
-
+            <div className="flex flex-col px-12 py-12 bg-white bg-cover" id="past" data-aos="fade-up">
+                <p className="text-black text-center text-[48px] font-serif">Our Creative Team</p>
+                <p className="text-gray-500 mb-4 text-center">A wonderful serenity has taken possession of my entire soul, like these sweet mo alone, and feel the charm of existence in this spot.</p>
+                <div className="flex flex-col md:flex-row mt-4">
+                    <div className="flex flex-1 flex-col">
+                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
+                        <p className="text-center text-amber-500">Builder Operation Head</p>
+                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
+                    </div>
+                    <div className="flex flex-1 flex-col">
+                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
+                        <p className="text-center text-amber-500">Builder Operation Head</p>
+                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
+                    </div>
+                    <div className="flex flex-1 flex-col">
+                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
+                        <p className="text-center text-amber-500">Builder Operation Head</p>
+                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
+                    </div>
+                    <div className="flex flex-1 flex-col">
+                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
+                        <p className="text-center text-amber-500">Builder Operation Head</p>
+                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
+                    </div>
+                    <div className="flex flex-1 flex-col">
+                        <img src="/assets/tm1.jpg" alt="team member" className="mb-4"/>
+                        <p className="text-center text-amber-500">Builder Operation Head</p>
+                        <p className="text-center text-black font-bold text-[24px]">BENEDICT ARNOLD</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
