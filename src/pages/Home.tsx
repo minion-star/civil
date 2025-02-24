@@ -117,7 +117,60 @@ const Home = () => {
             </div>
             <div className="bg-white bg-cover flex flex-col px-12 py-12" id="creative-work">
                 <p className="text-black text-center text-[48px] font-serif">Our Creative Work</p>
+                    <div className="flex flex-col md:flex-row mt-16 p-8">
+                        <div className="flex flex-1 flex-col m-4 ">
+                            {[
+                                ["/assets/pf1.jpg", "Project-01"],
+                                ["/assets/pf6.jpg", "Project-06"],
+                                ["/assets/pf7.jpg", "Project-07"]
+                            ].map(([img, title], index) => (
+                                
+                                    <div
+                                        className="flex-auto mt-8 bg-no-repeat bg-cover bg-center min-h-[200px] max-h-[400px] w-full rounded-lg shadow-lg flex items-center justify-center text-white text-xl font-semibold"
+                                        style={{ backgroundImage: `url(${img})` }} key={index} 
+                                    >
+                                        {title}
+                                    </div>
+                                
+                            ))}
+                        </div>
+                        <div className="flex flex-1 flex-col m-4">
+                            {[
+                                ["/assets/pf2.jpg", "Project-02"],
+                                ["/assets/pf4.jpg", "Project-04"],
+                                ["/assets/pf9.jpg", "Project-09"]
+                            ].map(([img, title], index) => (
+                                
+                                    <div
+                                        className="flex-auto mt-8 bg-no-repeat bg-cover bg-center min-h-[200px] max-h-[400px] w-full rounded-lg shadow-lg flex items-center justify-center text-white text-xl font-semibold"
+                                        style={{ backgroundImage: `url(${img})` }} key={index}
+                                    >
+                                        {title}
+                                    </div>
+                                
+                            ))}
+                        </div>
+
+                        <div className="flex flex-1 flex-col m-4">
+                            {[
+                                ["/assets/pf3.jpg", "Project-03"],
+                                ["/assets/pf5.jpg", "Project-05"],
+                                ["/assets/pf8.jpg", "Project-08"]
+                            ].map(([img, title], index) => (
+                                
+                                    <div
+                                        className="flex-auto mt-8 bg-no-repeat bg-cover bg-center min-h-[200px] max-h-[400px] w-full rounded-lg shadow-lg flex items-center justify-center text-white text-xl font-semibold"
+                                        style={{ backgroundImage: `url(${img})` }} key={index}
+                                    >
+                                        {title}
+                                    </div>
+                                
+                            ))}
+                        </div>
+                </div>
             </div>
+
+
         </div>
     );
 };
