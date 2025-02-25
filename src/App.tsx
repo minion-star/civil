@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound'
 import Topbar from './components/Topbar'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
+import About from './pages/About'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
       </Routes>
       <Sidebar/>
       <Footer/>

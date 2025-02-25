@@ -3,12 +3,12 @@ const Footer = () => {
         <footer className="bg-black text-white py-16 px-12">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Contact Info */}
-                <div className="text-left text-sm">
-                <h3 className="text-lg font-bold">CONTACT US</h3>
-                <p>B-14 Collins Street West Victoria</p>
-                <p>2386 lorems colerfes state</p>
-                <p>(+123) 456 789 - (+024) 666 888</p>
-                <p>Contact@yourcompany.com</p>
+                <div className="md:text-left text-sm text-center">
+                    <h3 className="text-lg font-bold">CONTACT US</h3>
+                    <p>Tacoma, WA</p>
+                    <p>6843 S JUNETT ST</p>
+                    <p>(+123) 456 789 - (+024) 666 888</p>
+                    <p>wde2279@gmail.com</p>
                 </div>
 
                 {/* Logo */}

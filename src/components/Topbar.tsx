@@ -12,7 +12,7 @@ const Topbar = () => {
     };
 
     return (
-        <div className="fixed w-full top-0 left-0 bg-white z-10 border-b-2 border-amber-500">
+        <div className="sticky w-full top-0 left-0 bg-white z-10 border-b-2 border-amber-500">
             <div className="container mx-auto flex justify-between items-center px-6 py-4">
                 {/* Logo */}
                 <div id="logo">
