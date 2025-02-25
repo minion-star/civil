@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import Topbar from './components/Topbar'
 import Sidebar from './components/Sidebar'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
       <Sidebar/>
+      <Footer/>
     </BrowserRouter>
   )
 }
