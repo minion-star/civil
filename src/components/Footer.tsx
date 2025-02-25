@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="bg-black text-white py-6">
+        <footer className="bg-black text-white py-16 px-12">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Contact Info */}
                 <div className="text-left text-sm">
@@ -12,29 +12,30 @@ const Footer = () => {
                 </div>
 
                 {/* Logo */}
-                <div className="flex items-center justify-center">
+                <div className="flex flex-col items-center justify-center">
                     <img 
                         src="/assets/logo-white.png" 
                         alt="Civil Engineer Logo" 
-                        className="h-16 w-auto md:h-20 lg:h-24"
+                        className="h-8 w-auto md:h-10 lg:h-12 my-4"
                     />
+                    <nav className="text-sm space-x-4 mt-4 md:mt-0">
+                    <a href="#" className="hover:text-amber-500">Home</a><span> | </span>
+                    <a href="#" className="hover:text-amber-500">About us</a><span> | </span>
+                    <a href="#" className="hover:text-amber-500">Projects</a><span> | </span>
+                    <a href="#" className="hover:text-amber-500">Blog</a><span> | </span>
+                    <a href="#" className="hover:text-amber-500">Team</a><span> | </span>
+                    <a href="#" className="hover:text-amber-500">Pricing</a><span> | </span>
+                    <a href="#" className="hover:text-amber-500">Contact</a>
+                    </nav>
                 </div>
 
                 {/* Footer Links */}
-                <nav className="text-sm space-x-4 mt-4 md:mt-0">
-                <a href="#" className="hover:text-gray-400">Home</a> | 
-                <a href="#" className="hover:text-gray-400">About us</a> | 
-                <a href="#" className="hover:text-gray-400">Projects</a> | 
-                <a href="#" className="hover:text-gray-400">Blog</a> | 
-                <a href="#" className="hover:text-gray-400">Team</a> | 
-                <a href="#" className="hover:text-gray-400">Pricing</a> | 
-                <a href="#" className="hover:text-gray-400">Contact</a>
-                </nav>
+                
 
                 
             </div>
             {/* Copyright */}
-            <p className="text-xs mt-16 md:mt-8 text-center text-white">Copyright &copy All Rights Reserved Civil Engineer</p>
+            <p className="text-xs mt-16 md:mt-8 text-center text-white">Copyright &copy; All Rights Reserved by Civil Team</p>
         </footer>
     );
 }
