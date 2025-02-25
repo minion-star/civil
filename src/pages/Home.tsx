@@ -318,9 +318,9 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-col px-12 py-12 bg-black bg-cover" id="feedback">
+            <div className="flex flex-col px-12 py-12 bg-black bg-cover" id="feedback" data-aos="fade-up">
                 <p className="text-white text-center text-[48px] font-serif">Why Customers Love working with us</p>
-                <div className="relative w-full overflow-hidden mt-4 flex items-center justify-center" data-aos="fade-up">
+                <div className="relative w-full overflow-hidden mt-4 flex items-center justify-center">
                     {/* Left Button */}
                     <button 
                         onClick={feedbackLeft} 
@@ -352,8 +352,8 @@ const Home = () => {
                 </div>
             </div>
             <div className="flex flex-col px-12 py-12 bg-white bg-cover" id="blogs">
-                <p className="text-black text-[48px] text-center font-serif">Blogs</p>
-                <div></div>
+                <p className="text-black text-[48px] text-center font-serif mt-4">Blogs</p>
+                <div className=""></div>
             </div>
         </div>
     );

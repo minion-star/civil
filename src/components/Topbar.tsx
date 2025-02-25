@@ -21,12 +21,12 @@ const Topbar = () => {
 
                 {/* Desktop Navigation */}
                 <ul className="hidden md:flex flex-row space-x-6">
-                    <li><Link to="/" className="text-black hover:text-gray-700 duration-700">Home</Link></li>
-                    <li><Link to="/about" className="text-black hover:text-gray-700 duration-700">About Us</Link></li>
-                    <li><Link to="/projects" className="text-black hover:text-gray-700 duration-700">Projects</Link></li>
-                    <li><Link to="/blog" className="text-black hover:text-gray-700 duration-700">Blog</Link></li>
-                    <li><Link to="/pages" className="text-black hover:text-gray-700 duration-700">Pages</Link></li>
-                    <li><Link to="/contact" className="text-black hover:text-gray-700 duration-700">Contact Us</Link></li>
+                    <li><Link to="/" className="text-black hover:text-amber-500 duration-700">Home</Link></li>
+                    <li><Link to="/about" className="text-black hover:text-amber-500 duration-700">About Us</Link></li>
+                    <li><Link to="/projects" className="text-black hover:text-amber-500 duration-700">Projects</Link></li>
+                    <li><Link to="/blog" className="text-black hover:text-amber-500 duration-700">Blog</Link></li>
+                    <li><Link to="/pages" className="text-black hover:text-amber-500 duration-700">Pages</Link></li>
+                    <li><Link to="/contact" className="text-black hover:text-amber-500 duration-700">Contact Us</Link></li>
                 </ul>
 
                 {/* Mobile Menu Button */}
