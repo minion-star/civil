@@ -16,7 +16,7 @@ const Topbar = () => {
             <div className="container mx-auto flex justify-between items-center px-6 py-4">
                 {/* Logo */}
                 <div id="logo">
-                    <img src="/assets/logo-white.png" alt="logo" className="w-16 h-8" />
+                    <img src="/assets/logo-black.png" alt="logo" className="w-16 h-8" />
                 </div>
 
                 {/* Desktop Navigation */}
